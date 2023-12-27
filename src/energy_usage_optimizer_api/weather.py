@@ -5,8 +5,8 @@ import httpx
 
 
 class VirtualWeatherStation(BaseModel):
-    lat: float = 47.869975370191305
-    lon: float = 12.648035414408115
+    lat: float = 47.0
+    lon: float = 12.0
     openweathermap_api_key: str | None = None
 
 
@@ -48,6 +48,6 @@ async def get_weather_forecast_from_openweathermap(virtual_weather_station: Virt
 
 # if __name__ == "__main__":
 
-#     vws = VirtualWeatherStation(lat=47.869975370191305, lon=12.6, openweathermap_api_key="307789277bd8f58cb4528a316bdcd1b7")
+#     vws = VirtualWeatherStation(lat=47.0, lon=12.0, openweathermap_api_key="ENTER_YOUR_OWN_KEY_HERE")
 #     forecast_light = _get_weather_forecast(vws)
 #     print(forecast_light)
