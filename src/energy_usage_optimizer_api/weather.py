@@ -24,7 +24,7 @@ class WeatherForecast(BaseModel):
 async def get_weather_forecast_from_openweathermap(virtual_weather_station: VirtualWeatherStation):
 
     if virtual_weather_station.openweathermap_api_key is None or virtual_weather_station.openweathermap_api_key=="string":
-        virtual_weather_station.openweathermap_api_key = "f7cc87d66f0a3f5053b024dad687201e"
+        virtual_weather_station.openweathermap_api_key = "ENTER_YOUR_OWN_KEY_HERE"
         
     url = f"https://api.openweathermap.org/data/2.5/forecast?lat={virtual_weather_station.lat}&lon={virtual_weather_station.lon}&appid={virtual_weather_station.openweathermap_api_key}"
 
